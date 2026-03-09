@@ -19,7 +19,7 @@ NC/
 │   └── output/             # CellRanger 运行结果输出
 ├── Ranalyze/               # R 语言下游分析目录
 │   └── raw/                # 存放从 GEO 下载的矩阵数据 (GSE168158)
-[cite_start]└── software/               # 软件安装目录 (cellranger-9.0.1) 
+└── software/               # 软件安装目录 (cellranger-9.0.1) 
 
 ```
 
