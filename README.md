@@ -12,14 +12,14 @@
 
 ```text
 NC/
-[cite_start]├── Bcell/                  # 数据存储主目录 [cite: 1]
-[cite_start]│   ├── fastq/              # 原始序列 (下设 RNA/ADT/HTO 子目录) [cite: 1]
-[cite_start]│   ├── meta/               # 存放 libraries.csv 和 feature_reference.csv [cite: 1]
-[cite_start]│   ├── refdata/            # 10x 官方参考基因组 [cite: 1]
+├── Bcell/                  # 数据存储主目录 
+│   ├── fastq/              # 原始序列 (下设 RNA/ADT/HTO 子目录) 
+│   ├── meta/               # 存放 libraries.csv 和 feature_reference.csv
+│   ├── refdata/            # 10x 官方参考基因组 
 │   └── output/             # CellRanger 运行结果输出
 ├── Ranalyze/               # R 语言下游分析目录
 │   └── raw/                # 存放从 GEO 下载的矩阵数据 (GSE168158)
-[cite_start]└── software/               # 软件安装目录 (cellranger-9.0.1) [cite: 1]
+[cite_start]└── software/               # 软件安装目录 (cellranger-9.0.1) 
 
 ```
 
@@ -69,7 +69,7 @@ bash 03_run_cellranger.sh
 本项目提供两种分析路径，请根据数据来源选择：
 
 * **路径 A：处理 GEO 已发表矩阵 (推荐)**
-如果你直接使用 GEO ([GSE168158](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168158)) 的原始计数矩阵：
+如果直接使用 GEO ([GSE168158](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE168158)) 的原始计数矩阵：
 ```bash
 Rscript Control_a.R
 
@@ -77,7 +77,7 @@ Rscript Control_a.R
 
 
 * **路径 B：处理自行运行的 CellRanger 结果**
-如果你使用第一阶段生成的 `filtered_feature_bc_matrix`：
+如果使用第一阶段生成的 `filtered_feature_bc_matrix`：
 ```bash
 Rscript Control.R
 
@@ -103,5 +103,3 @@ Rscript clear.R
 * **功能富集**：针对 PreBCR 依赖阶段进行 Myc Targets 及代谢通路的 GSEA 分析。
 
 ---
-
-**需要我为您详细解释 `03_run_cellranger.sh` 中关于 FASTQ 文件自动命名的规则吗？**
