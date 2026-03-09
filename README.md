@@ -1,7 +1,3 @@
-以下是为您优化后的 `README.md` 内容，您可以直接复制使用。
-
----
-
 # B-cell 多组学单细胞测序复现项目 (Nature Communications, 2021)
 
 本项目旨在复现 B 细胞发育过程中的多组学数据分析流水线，涵盖从原始数据下载、CellRanger 定量到下游 Seurat 深度分析的全过程 。
